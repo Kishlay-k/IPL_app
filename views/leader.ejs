@@ -1,0 +1,28 @@
+<%- include("header") -%>
+
+<style>
+    body{
+        background-image: linear-gradient(#1A4A91,#1A4A91);
+        background-color: #1A4A91;
+        color: aliceblue;
+    }
+</style>
+
+<%winnr.sort(function(a,b){return b[0]-a[0]})%>
+
+<table class="table table-lg table-hover table-dark table-striped" style="background-image: linear-gradient(#1A4A91,black);">
+    <tr>
+        <th>UserName</th>
+        <th>Wins</th>
+        <th>Loss</th>
+    </tr>
+    <%for(let kj=0;kj<winnr.length;kj++){%>
+    <tr>
+        <th><%=winnr[kj][2]%></th>
+        <td><%=winnr[kj][0]%></td>
+        <td><%=winnr[kj][1]%></td>
+    </tr>
+    <%}%>
+</table>
+
+<%- include("footer") -%>

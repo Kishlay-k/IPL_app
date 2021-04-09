@@ -118,6 +118,30 @@ app.get("/coming_soon", function (req, res) {
   res.render("coming_soon");
 });
 
+app.get("/leader", function (req, res) {
+  let bett = [];
+  let winnr = [];
+  User.find({}, function (err, doc) {
+    doc.forEach(function (ele) {
+      let wn = 0;
+      let ls = 0;
+      for (var jk = 1; jk < 57; jk++) {
+        if (ele.Wins[jk] == "") {
+          break;
+        } else {
+          if (ele.Wins[jk] == ele.Bets[jk]) {
+            wn++;
+          } else {
+            ls++;
+          }
+        }
+      }
+      winnr.push([wn, ls, ele.username]);
+    });
+    res.render("leader", { winnr: winnr });
+  });
+});
+
 app.get("/table", function (req, res) {
   res.render("table", { tabl: tabl });
 });
@@ -136,11 +160,8 @@ app.post("/test", function (req, res) {
   let idd = req.body.id;
   const match = req.body.matches;
   const number = req.body.number;
-  console.log(match, number);
   if (match == 1) {
-    console.log("Match = 1", dtae.getHours());
     if (dtae.getHours() < 19) {
-      console.log(password, choice, idd, match, number);
       User.find({ currentKey: password }, function (err, doc) {
         if (doc.length == 0) {
           res.redirect("/home");
@@ -154,18 +175,14 @@ app.post("/test", function (req, res) {
         }
       });
     } else {
-      console.log("Match = 1 Late");
 
       res.render("Over");
     }
   } else if (match == 2) {
-    console.log("Match = 2");
 
     if (number == 1) {
-      console.log("Match = 2,Number = 1");
 
       if (dtae.getHours() < 15) {
-        console.log(password, choice, idd, match, number);
         User.find({ currentKey: password }, function (err, doc) {
           if (doc.length == 0) {
             res.redirect("/home");
@@ -179,15 +196,12 @@ app.post("/test", function (req, res) {
           }
         });
       } else if (dtae.getHours() >= 15) {
-        console.log("Match = 2,Number = 1 Late");
 
         res.render("Over");
       }
     } else if (number == 2) {
-      console.log("Match = 2,Number = 2");
 
       if (dtae.getHours() < 15) {
-        console.log(password, choice, idd, match, number);
         User.find({ currentKey: password }, function (err, doc) {
           if (doc.length == 0) {
             res.redirect("/home");
@@ -201,7 +215,6 @@ app.post("/test", function (req, res) {
           }
         });
       } else if (dtae.getHours() >= 15) {
-        console.log("Match = 2,Number = 2 Late");
         res.render("Over");
       }
     }
@@ -215,7 +228,6 @@ app.get("/Winner", function (req, res) {
 app.post("/Winner", function (req, res) {
   if (req.body.key == "adgjlsfhk") {
     User.find({}, function (err, doc) {
-      console.log(doc);
       doc.forEach(function (ele) {
         ele.Wins.set(parseInt(req.body.id), req.body.winner);
         ele.save();
@@ -228,7 +240,6 @@ app.post("/Winner", function (req, res) {
 app.get("/current", function (req, res) {
   User.find({}, function (err, doc) {
     res.render("current", { doc: doc });
-    console.log(doc.length);
   }).sort("username");
 });
 
