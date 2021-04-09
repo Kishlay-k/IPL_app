@@ -1,0 +1,392 @@
+[{
+  "_id": 1,
+  "dateNDday": "April 9 Friday",
+  "time": "19:30",
+  "T1": "MI",
+  "T2": "RCB"
+},
+{
+  "_id": 2,
+  "dateNDday": "April 10 Saturday",
+  "time": "19:30",
+  "T1": "CSK",
+  "T2": "DC"
+},
+{
+  "_id": 3,
+  "dateNDday": "April 11 Sunday",
+  "time": "19:30",
+  "T1": "SRH",
+  "T2": "KKR"
+},
+{
+  "_id": 4,
+  "dateNDday": "April 12 Monday",
+  "time": "19:30",
+  "T1": "RR",
+  "T2": "KXIP"
+},
+{
+  "_id": 5,
+  "dateNDday": "April 13 Tuesday",
+  "time": "19:30",
+  "T1": "KKR",
+  "T2": "MI"
+},
+{
+  "_id": 6,
+  "dateNDday": "April 14 Wed",
+  "time": "19:30",
+  "T1": "SRH",
+  "T2": "RCB"
+},
+{
+  "_id": 7,
+  "dateNDday": "April 15 Thursday",
+  "time": "19:30",
+  "T1": "RR",
+  "T2": "DC"
+},
+{
+  "_id": 8,
+  "dateNDday": "April 16 Friday",
+  "time": "19:30",
+  "T1": "KXIP",
+  "T2": "CSK"
+},
+{
+  "_id": 9,
+  "dateNDday": "April 17 Saturday",
+  "time": "19:30",
+  "T1": "MI",
+  "T2": "SSRH"
+},
+{
+  "_id": 10,
+  "dateNDday": "April 18 Sunday",
+  "time": "15:30",
+  "T1": "RCB",
+  "T2": "KKR"
+},
+{
+  "_id": 11,
+  "dateNDday": "April 18, Sunday",
+  "time": "19:30",
+  "T1": "DC",
+  "T2": "KXIP"
+},
+{
+  "_id": 12,
+  "dateNDday": "April 19 Monday",
+  "time": "19:30",
+  "T1": "CSK",
+  "T2": "RR"
+},
+{
+  "_id": 13,
+  "dateNDday": "April 20 Tuesday",
+  "time": "19:30",
+  "T1": "DC",
+  "T2": "MI"
+},
+{
+  "_id": 14,
+  "dateNDday": "April 21 Wed",
+  "time": "15:30",
+  "T1": "KXIP",
+  "T2": "SSRH"
+},
+{
+  "_id": 15,
+  "dateNDday": "April 21 Wed",
+  "time": "19:30",
+  "T1": "KKR",
+  "T2": "CSK"
+},
+{
+  "_id": 16,
+  "dateNDday": "April 22 Thursday",
+  "time": "19:30",
+  "T1": "RCB",
+  "T2": "RR"
+},
+{
+  "_id": 17,
+  "dateNDday": "April 23 Friday",
+  "time": "19:30",
+  "T1": "KXIP",
+  "T2": "MI"
+},
+{
+  "_id": 18,
+  "dateNDday": "April 24 Saturday",
+  "time": "19:30",
+  "T1": "RR",
+  "T2": "KKR"
+},
+{
+  "_id": 19,
+  "dateNDday": "April 25 Sunday",
+  "time": "15:30",
+  "T1": "CSK",
+  "T2": "RCB"
+},
+{
+  "_id": 20,
+  "dateNDday": "April 25 Sunday",
+  "time": "19:30",
+  "T1": "SRH",
+  "T2": "DC"
+},
+{
+  "_id": 21,
+  "dateNDday": "April 26 Monday",
+  "time": "19:30",
+  "T1": "KXIP",
+  "T2": "KKR"
+},
+{
+  "_id": 22,
+  "dateNDday": "April 27 Tuesday",
+  "time": "19:30",
+  "T1": "DC",
+  "T2": "RCB"
+},
+{
+  "_id": 23,
+  "dateNDday": "April 28 Wed",
+  "time": "19:30",
+  "T1": "CSK",
+  "T2": "SSRH"
+},
+{
+  "_id": 24,
+  "dateNDday": "April 29 Thursday",
+  "time": "15:30",
+  "T1": "MI",
+  "T2": "RR"
+},
+{
+  "_id": 25,
+  "dateNDday": "April 29 Thursday",
+  "time": "19:30",
+  "T1": "DC",
+  "T2": "KKR"
+},
+{
+  "_id": 26,
+  "dateNDday": "April 30 Friday",
+  "time": "19:30",
+  "T1": "KXIP",
+  "T2": "RCB"
+},
+{
+  "_id": 27,
+  "dateNDday": "May 1 Saturday",
+  "time": "19:30",
+  "T1": "MI",
+  "T2": "CSK"
+},
+{
+  "_id": 28,
+  "dateNDday": "May 2 Sunday",
+  "time": "15:30",
+  "T1": "RR",
+  "T2": "SSRH"
+},
+{
+  "_id": 29,
+  "dateNDday": "May 2 Sunday",
+  "time": "19:30",
+  "T1": "KXIP",
+  "T2": "DC"
+},
+{
+  "_id": 30,
+  "dateNDday": "May 3 Monday",
+  "time": "19:30",
+  "T1": "KKR",
+  "T2": "RCB"
+},
+{
+  "_id": 31,
+  "dateNDday": "May 4 Tueday",
+  "time": "19:30",
+  "T1": "SRH",
+  "T2": "MI"
+},
+{
+  "_id": 32,
+  "dateNDday": "May 5 Wednesday",
+  "time": "19:30",
+  "T1": "RR",
+  "T2": "CSK"
+},
+{
+  "_id": 33,
+  "dateNDday": "May 6 Thursday",
+  "time": "19:30",
+  "T1": "RCB",
+  "T2": "KXIP"
+},
+{
+  "_id": 34,
+  "dateNDday": "May 7 Friday",
+  "time": "19:30",
+  "T1": "SRH",
+  "T2": "CSK"
+},
+{
+  "_id": 35,
+  "dateNDday": "May 8 Saturday",
+  "time": "15:30",
+  "T1": "KKR",
+  "T2": "DC"
+},
+{
+  "_id": 36,
+  "dateNDday": "May 8 Saturday",
+  "time": "19:30",
+  "T1": "RR",
+  "T2": "MI"
+},
+{
+  "_id": 37,
+  "dateNDday": "May 9 Sunday",
+  "time": "15:30",
+  "T1": "CSK",
+  "T2": "KXIP"
+},
+{
+  "_id": 38,
+  "dateNDday": "May 9 Sunday",
+  "time": "19:30",
+  "T1": "RCB",
+  "T2": "SSRH"
+},
+{
+  "_id": 39,
+  "dateNDday": "May 10 Monday",
+  "time": "19:30",
+  "T1": "MI",
+  "T2": "KKR"
+},
+{
+  "_id": 40,
+  "dateNDday": "May 11 Tuesday",
+  "time": "19:30",
+  "T1": "DC",
+  "T2": "RR"
+},
+{
+  "_id": 41,
+  "dateNDday": "May 12 Wednesday",
+  "time": "19:30",
+  "T1": "CSK",
+  "T2": "KKR"
+},
+{
+  "_id": 42,
+  "dateNDday": "May 13 Thursday",
+  "time": "15:30",
+  "T1": "MI",
+  "T2": "KXIP"
+},
+{
+  "_id": 43,
+  "dateNDday": "May 13 Thursday",
+  "time": "19:30",
+  "T1": "SRH",
+  "T2": "RR"
+},
+{
+  "_id": 44,
+  "dateNDday": "May 14 Friday",
+  "time": "19:30",
+  "T1": "RCB",
+  "T2": "DC"
+},
+{
+  "_id": 45,
+  "dateNDday": "May 15 Saturday",
+  "time": "19:30",
+  "T1": "KKR",
+  "T2": "KXIP"
+},
+{
+  "_id": 46,
+  "dateNDday": "May 16 Sunday",
+  "time": "15:30",
+  "T1": "RR",
+  "T2": "RCB"
+},
+{
+  "_id": 47,
+  "dateNDday": "May 16 Sunday",
+  "time": "19:30",
+  "T1": "CSK",
+  "T2": "MI"
+},
+{
+  "_id": 48,
+  "dateNDday": "May 17 Monday",
+  "time": "15:30",
+  "T1": "DC",
+  "T2": "SSRH"
+},
+{
+  "_id": 49,
+  "dateNDday": "May 18 Tuesday",
+  "time": "15:30",
+  "T1": "KKR",
+  "T2": "RR"
+},
+{
+  "_id": 50,
+  "dateNDday": "May 19 Wednesday",
+  "time": "15:30",
+  "T1": "SRH",
+  "T2": "KXIP"
+},
+{
+  "_id": 51,
+  "dateNDday": "May 20 Thursday",
+  "time": "15:30",
+  "T1": "RCB",
+  "T2": "MI"
+},
+{
+  "_id": 52,
+  "dateNDday": "May 21 Friday",
+  "time": "15:30",
+  "T1": "KKR",
+  "T2": "SSRH"
+},
+{
+  "_id": 53,
+  "dateNDday": "May 21 Friday",
+  "time": "19:30",
+  "T1": "DC",
+  "T2": "CSK"
+},
+{
+  "_id": 54,
+  "dateNDday": "May 22 Saturday",
+  "time": "19:30",
+  "T1": "KXIP",
+  "T2": "RR"
+},
+{
+  "_id": 55,
+  "dateNDday": "May 23 Sunday",
+  "time": "15:30",
+  "T1": "MI",
+  "T2": "DC"
+},
+{
+  "_id": 56,
+  "dateNDday": "May 23 Sunday",
+  "time": "19:30",
+  "T1": "RCB",
+  "T2": "CSK"
+}]

@@ -1,0 +1,34 @@
+[
+    {
+        "_id": 1,
+        "username": "Kishlay",
+        "currentKey": "kishlay",
+        "all_keys": [],
+        "Bets": [],
+        "Wins": []
+    },
+    {
+        "_id": 2,
+        "username": "Piyush",
+        "currentKey": "piyush",
+        "all_keys": [],
+        "Bets": [],
+        "Wins": []
+    },
+    {
+        "_id": 3,
+        "username": "Raushan",
+        "currentKey": "raushan",
+        "all_keys": [],
+        "Bets": [],
+        "Wins": []
+    },
+    {
+        "_id": 4,
+        "username": "Aryan",
+        "currentKey": "aryan",
+        "all_keys": [],
+        "Bets": [],
+        "Wins": []
+    }
+]

@@ -1,0 +1,34 @@
+<%- include("header") -%>
+
+<style>
+    body{
+        background-image: linear-gradient(#1A4A91,#1A4A91);
+        background-color: #1A4A91;
+        color: aliceblue;
+    }
+</style>
+<div>
+    <table class="table table-lg table-hover table-dark table-striped" style="background-image: linear-gradient(#1A4A91,black);
+    ">
+        <tr>
+            <th scope="col">UserName</th>
+            <th scope="col">id</th>
+            <!-- <th scope="col">Team 2</th>
+            <th scope="col">Date, Day</th>
+            <th scope="col">Time</th> -->
+        </tr>
+        <%user.forEach(function(ele){%>
+        <tr>
+            <th scope="col"><%=ele.username%></th>
+            <td><%=ele._id%></td>
+            <!-- <td><%=ele.T2%></td>
+            <td><%=ele.dateNDday%></td>
+            <td><%=ele.time%></td> -->
+        </tr>
+        <%})%>
+    </table>
+</div>
+
+
+
+<%- include("footer") -%>

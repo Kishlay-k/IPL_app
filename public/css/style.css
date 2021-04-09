@@ -1,0 +1,150 @@
+.btn-squared-default {
+  width: 200px !important;
+  height: 200px !important;
+  font-size: 10px;
+}
+
+.btn-squared-default:hover {
+  border: 3px solid white;
+  font-weight: 800;
+}
+
+.btn-squared-default-plain {
+  width: 100px !important;
+  height: 100px !important;
+  font-size: 10px;
+}
+
+.nav-link {
+  color: antiquewhite;
+}
+
+.btn-squared-default-plain:hover {
+  border: 0px solid white;
+}
+
+#betButtons {
+  /* border: 3px solid; */
+  padding: 76px;
+  text-align: center;
+  margin: auto;
+  background-color: transparent;
+}
+.navbar {
+  background-image: linear-gradient(#246ab0, #18388b, #18388b);
+
+  /* background-color: #1A559E; */
+}
+
+.navbar-brand {
+  color: #eeebdd;
+}
+.btn-primary {
+  background: transparent;
+  color: #4d2121;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  background: transparent;
+}
+
+body {
+  background-image: url("https://resources.platform.iplt20.com/photo-resources/2021/01/21/e9a5b709-9a1d-448f-b273-8d4ba7a0c1f6/IPL-2020.jpg?width=2000&height=1333");
+  background-color: #19398a;
+  background-position: 1000px, 1000px;
+  height: 1350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.teamNM {
+  font-size: xx-large;
+  padding: 0;
+  background-color: transparent;
+}
+
+.VS {
+  color: white;
+  /* padding-top: 10px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40%;
+  font-size: large;
+}
+
+.navbar-toggler {
+  background-image: linear-gradient(#18388b, #246ab0, #18388b);
+}
+
+.navbar {
+  box-shadow: 0 4px 8px 0 hsl(0deg 0% 7% / 50%);
+  background-image: linear-gradient(
+    90deg,
+    #19398a 12%,
+    #1b4c92 50%,
+    #19398a 89%
+  );
+  color: #fff;
+  width: 100%;
+  height: 6.5rem;
+  z-index: 100;
+}
+
+.brand {
+  background-position: -100px -276px;
+  background-image: url("https://www.iplt20.com/resources/v4.21.0/i/sprites/global-sprite.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 110px;
+  height: 56px;
+  margin: 1.1rem 0 0 3rem;
+  overflow: hidden;
+  text-indent: -90rem;
+}
+
+.cropped {
+  width: 150px; /* width of container */
+  height: 150px; /* height of container */
+  overflow: hidden;
+  border: 5px solid black;
+}
+
+input[type="radio"][name="buttonGroup"] {
+  display: none;
+}
+
+
+/* Clicking a label will select its corresponding hidden radio button
+   We can select that radio buttons sibling label and style it. */
+input[type="radio"][name="buttonGroup"]:checked + label {
+  background-color: #a0a0a0;
+}
+
+.yourBet{
+  padding: 76px;
+  text-align: center;
+  margin: auto;
+  background-color: transparent;
+}
+
+.yourBetop{
+  font-size: larger;
+  color: #eeebdd;
+}
+.yourBetBottom{
+  font-size: large;
+  color: #eeebdd;
+
+}
+
+.coming_soon{
+  color:red;
+}
+
+.navbar{
+  z-index: 9999;
+}

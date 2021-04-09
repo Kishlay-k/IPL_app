@@ -1,0 +1,17 @@
+<%- include("header") -%>
+
+<!-- Betting Button section starts -->
+<div class="betButtons" id="betButtons">
+    <form action="/winner" method="POST">
+        <label for="key" style="color: aliceblue;">Enter master key:</label>
+        <input type="password" value="" name="key">
+        <label for="id" style="color: aliceblue;">ID:</label>
+        <input type="text" value="" name="id">
+        <label for="password" style="color: aliceblue;">Winner</label>
+        <input type="text" value="" name="winner">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<!-- Betting Button section ends -->
+
+<%- include("footer") -%>

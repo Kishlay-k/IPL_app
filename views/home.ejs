@@ -1,0 +1,20 @@
+<%- include("header") -%>
+
+<!-- Betting Button section starts -->
+<div class="betButtons" id="betButtons">
+    <form action="/test" method="POST">
+        <label for="password" style="color: aliceblue;">Enter your key:</label>
+        <input type="password" required placeholder="Enter your provided key" name="password"><br>
+        
+        <input type="text" value="<%=id%>" name="id" readonly hidden style="position: absolute;">
+        <input type="text" value="<%=matches%>" name="matches" readonly hidden style="position: absolute;">
+        <input type="text" value="<%=number%>" name="number" readonly hidden style="position: absolute;">
+
+        <button class="teamNM" name="choice" value="<%=t1%>" id=""><img src="Images\<%=t1%>.jfif" class="TmLg" alt="<%=t1%>"></button>
+        <span class="VS">VS</span>
+        <button class="teamNM" name="choice" value="<%=t2%>" id=""><img src="Images\<%=t2%>.jfif" class="TmLg" alt="<%=t2%>"></button>
+    </form>
+</div>
+<!-- Betting Button section ends -->
+
+<%- include("footer") -%>
