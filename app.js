@@ -75,10 +75,16 @@ app.get("/", function (req, res) {
     function (err, doc) {
       let dnd = new Date();
       let date = new Date();
+      console.log(doc)
       if (doc.length == 0) {
+        console.log(4);
         res.render("notStarted");
       } else if (doc.length == 1) {
-        if (date.getHours() < 19) {
+        if (
+          date.getUTCHours() < 13 ||
+          (date.getUTCMinutes() < 30 && date.getUTCHours() == 13)
+        ) {
+          console.log(5);
           res.render("home", {
             t1: doc[0].T1,
             t2: doc[0].T2,
@@ -87,10 +93,15 @@ app.get("/", function (req, res) {
             number: 1,
           });
         } else {
+        console.log(6,date.getUTCMinutes(),date.getUTCHours());
+          console.log("OVer 1");
           res.render("Over");
         }
       } else if (doc.length == 2) {
-        if (date.getHours() < 15) {
+        if (
+          date.getUTCHours() < 9 ||
+          (date.getUTCMinutes() < 30 && date.getUTCHours() == 9)
+        ) {
           res.render("home", {
             t1: doc[0].T1,
             t2: doc[0].T2,
@@ -98,7 +109,10 @@ app.get("/", function (req, res) {
             matches: 2,
             number: 1,
           });
-        } else if (date.getHours() < 19) {
+        } else if (
+          date.getUTCHours() < 13 ||
+          (date.getUTCMinutes() < 30 && date.getUTCHours() == 13)
+        ) {
           res.render("home", {
             t1: doc[1].T1,
             t2: doc[1].T2,
@@ -107,19 +121,49 @@ app.get("/", function (req, res) {
             number: 2,
           });
         } else {
+          console.log("OVer 2");
+
           res.render("Over");
         }
       }
     }
-  );
+  ).sort("_id");
 });
 
 app.get("/coming_soon", function (req, res) {
   res.render("coming_soon");
 });
 
+app.get("/leader", function (req, res) {
+  let bett = [];
+  let winnr = [];
+  User.find({}, function (err, doc) {
+    doc.forEach(function (ele) {
+      let wn = 0;
+      let ls = 0;
+      for (var jk = 1; jk < 57; jk++) {
+        if (ele.Wins[jk] == "") {
+          break;
+        } else {
+          if (ele.Wins[jk] == ele.Bets[jk]) {
+            wn++;
+          } else {
+            ls++;
+          }
+        }
+      }
+      winnr.push([wn, ls, ele.username]);
+    });
+    res.render("leader", { winnr: winnr });
+  });
+});
+
 app.get("/table", function (req, res) {
   res.render("table", { tabl: tabl });
+});
+app.get("/time", function (req, res) {
+  let date = new Date();
+  res.render("var",{ddd:date.getUTCDate(),dnd:date.getUTCHours(),dmd:date.getUTCMinutes()});
 });
 
 app.get("/test123", function (req, res) {
@@ -136,14 +180,14 @@ app.post("/test", function (req, res) {
   let idd = req.body.id;
   const match = req.body.matches;
   const number = req.body.number;
-  console.log(match, number);
   if (match == 1) {
-    console.log("Match = 1", dtae.getHours());
-    if (dtae.getHours() < 19) {
-      console.log(password, choice, idd, match, number);
+    if (
+      dtae.getUTCHours() < 13 ||
+      (dtae.getUTCMinutes() < 30 && dtae.getUTCHours() == 13)
+    ) {
       User.find({ currentKey: password }, function (err, doc) {
         if (doc.length == 0) {
-          res.redirect("/home");
+          res.redirect("/");
         } else {
           let username = doc[0].username;
           res.render("success", { username: username, choice: choice });
@@ -154,21 +198,19 @@ app.post("/test", function (req, res) {
         }
       });
     } else {
-      console.log("Match = 1 Late");
+      console.log("OVer 3");
 
       res.render("Over");
     }
   } else if (match == 2) {
-    console.log("Match = 2");
-
     if (number == 1) {
-      console.log("Match = 2,Number = 1");
-
-      if (dtae.getHours() < 15) {
-        console.log(password, choice, idd, match, number);
+      if (
+        dtae.getUTCHours() < 9 ||
+        (dtae.getUTCMinutes() < 30 && dtae.getUTCHours() == 9)
+      ) {
         User.find({ currentKey: password }, function (err, doc) {
           if (doc.length == 0) {
-            res.redirect("/home");
+            res.redirect("/");
           } else {
             let username = doc[0].username;
             res.render("success", { username: username, choice: choice });
@@ -178,19 +220,19 @@ app.post("/test", function (req, res) {
             });
           }
         });
-      } else if (dtae.getHours() >= 15) {
-        console.log("Match = 2,Number = 1 Late");
+      } else {
+        console.log("Over 4");
 
         res.render("Over");
       }
     } else if (number == 2) {
-      console.log("Match = 2,Number = 2");
-
-      if (dtae.getHours() < 15) {
-        console.log(password, choice, idd, match, number);
+      if (
+        dtae.getUTCHours() < 13 ||
+        (dtae.getUTCMinutes() < 30 && dtae.getUTCHours() == 13)
+      ) {
         User.find({ currentKey: password }, function (err, doc) {
           if (doc.length == 0) {
-            res.redirect("/home");
+            res.redirect("/");
           } else {
             let username = doc[0].username;
             res.render("success", { username: username, choice: choice });
@@ -200,8 +242,9 @@ app.post("/test", function (req, res) {
             });
           }
         });
-      } else if (dtae.getHours() >= 15) {
-        console.log("Match = 2,Number = 2 Late");
+      } else {
+        console.log("OVer 5");
+
         res.render("Over");
       }
     }
@@ -215,7 +258,6 @@ app.get("/Winner", function (req, res) {
 app.post("/Winner", function (req, res) {
   if (req.body.key == "adgjlsfhk") {
     User.find({}, function (err, doc) {
-      console.log(doc);
       doc.forEach(function (ele) {
         ele.Wins.set(parseInt(req.body.id), req.body.winner);
         ele.save();
@@ -228,10 +270,14 @@ app.post("/Winner", function (req, res) {
 app.get("/current", function (req, res) {
   User.find({}, function (err, doc) {
     res.render("current", { doc: doc });
-    console.log(doc.length);
   }).sort("username");
 });
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000.");
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+app.listen(port, function () {
+  console.log("Server started successfully.");
 });
