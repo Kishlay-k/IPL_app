@@ -25,9 +25,23 @@
             <tr>
                 <th><%=j+1%></th>
                 <%for(var i = 0;i<doc.length;i++){%>
-                    <th>
-                        <%=doc[i].Bets[j+1]%>
-                    </th>
+                    <%if(doc[i].Bets[j+1]==""){%>
+                        <th>
+                            <p>-</p>
+                        </th>
+                    <%} else if(doc[i].Wins[j+1]==""){%>
+                        <th>
+                            <%=doc[i].Bets[j+1]%>
+                        </th>
+                    <%} else if (doc[i].Wins[j+1]==doc[i].Bets[j+1]){%>
+                        <th style="color:greenyellow">
+                            <%=doc[i].Bets[j+1]%>
+                        </th>
+                    <%} else{%>
+                        <th style="color:orangered">
+                            <%=doc[i].Bets[j+1]%>
+                        </th>
+                    <%}%>
                 <%}%>
             </tr>
         <%}%>

@@ -2,7 +2,7 @@
 
 <!-- Betting Button section starts -->
 <div class="betButtons" id="betButtons">
-    <form action="/test" method="POST">
+    <form action="/test" method="POST" id="betngForm">
         <label for="password" style="color: aliceblue;">Enter your key:</label>
         <input type="password" required placeholder="Enter your provided key" name="password"><br>
         
@@ -16,5 +16,18 @@
     </form>
 </div>
 <!-- Betting Button section ends -->
+<script> 
+    $(window).ready(function() {
+    $("#betngForm").on("keypress", function (event) {
+        console.log("aaya");
+        var keyPressed = event.keyCode || event.which;
+        if (keyPressed === 13) {
+            alert("You pressed the Enter key!!");
+            event.preventDefault();
+            return false;
+        }
+    });
+    });
 
+</script>
 <%- include("footer") -%>
